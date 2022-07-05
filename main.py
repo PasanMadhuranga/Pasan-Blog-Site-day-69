@@ -57,7 +57,7 @@ def admin_only(function):
     return wrapper
 
 
-##CONFIGURE TABLES
+# CONFIGURE TABLES
 class User(UserMixin, db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
