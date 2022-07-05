@@ -1,6 +1,8 @@
 import os
 import smtplib
 from functools import wraps
+from multiprocessing import process
+
 import werkzeug
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_bootstrap import Bootstrap
@@ -250,4 +252,4 @@ def delete_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=process.env.PORT)
