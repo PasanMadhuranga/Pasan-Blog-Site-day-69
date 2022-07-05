@@ -1,4 +1,3 @@
-import email_validator
 import smtplib
 from functools import wraps
 import werkzeug
