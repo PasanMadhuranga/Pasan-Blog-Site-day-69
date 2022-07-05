@@ -1,3 +1,4 @@
+import os
 import smtplib
 from functools import wraps
 import werkzeug
@@ -13,8 +14,8 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from flask_gravatar import Gravatar
 from forms import UserForm, LoginForm, CreatePostForm, CommentForm
 
-MY_EMAIL = "pasan7989@yahoo.com"
-MY_PASSWORD = "vkyojatvkjghoqkm"
+MY_EMAIL = os.environ["MY_EMAIL"]
+MY_PASSWORD = os.environ["MY_PASSWORD"]
 
 login_manager = LoginManager()
 app = Flask(__name__)
